@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./adm_produto.css">
+    <title>Tela ADM Prdoc</title>
+
+
+</head>
+<script>
+    function toggleSortIcon(sortImg) {
+        if (sortImg.src.includes('arrow-fat-up.svg')) {
+            sortImg.src = './icons/arrow-fat-down.svg';
+        } else if (sortImg.src.includes('arrow-fat-down.svg')) {
+            sortImg.src = './icons/arrow-fat-up.svg';
+        }
+    }
+</script>
+<body>
+    <header>
+        <img class="header-logo" src="./img/Logo_Branca.png" alt="Thechepes">
+        <h1>
+            Administração de Produtos
+        </h1>
+        <img class="header-user" src="./img/Icon_user.png" alt="Thechepes">
+    </header>
+        <table>
+            <tr>
+                <th>
+                    ID
+                    <img
+                        onclick="toggleSortIcon(this)"
+                        id="sort-img"
+                        src="./icons/arrow-fat-down.svg"
+                    />
+                </th>
+                <th>
+                    Título
+                    <img
+                        onclick="toggleSortIcon(this)"
+                        id="sort-img"
+                        src="./icons/arrow-fat-down.svg"
+                    />
+                </th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Data de entrada</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Top Gun: Maverick</td>
+                <td>R$ 99,99</td>
+                <td>10</td>
+                <td>12/12/12</td>
+                <td>
+                    <img src="./icons/dots-three.svg" alt="" />
+                </td>
+            </tr>
+        </table>
+        <div class="pagination">
+           <img src="./icons/table-page-left-disable.svg" alt=""> 
+           <div class="pages">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+           </div>
+           <img src="./icons/table-page-right.svg" alt="">
+
+        </div>
+
+       <img class="button-plus" src="./icons/button-plus.svg" alt="">
+    
+</body>
+</html>
