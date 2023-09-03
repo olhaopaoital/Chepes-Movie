@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./adm_produto.css">
+    <title>Tela ADM Prdoc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <img class="header-logo" src="./img/Logo_Branca.png" alt="Thechepes">
+        <h1>
+            Administração de Clientes
+        </h1>
+        <img class="header-user" src="./img/Icon_user.png" alt="Thechepes">
+    </header>
+    <table id="tableUsers">
+        <tr>
+            <th>
+                ID
+                <img onclick="toggleSortIcon(this)" id="sort-img" src="./icons/arrow-fat-down.svg" />
+            </th>
+            <th>
+                Email
+                <img onclick="toggleSortIcon(this)" id="sort-img" src="./icons/arrow-fat-down.svg" />
+            </th>
+            <th>Nome</th>
+            <th>Quantidade de compras</th>
+            <th>Data de cadastro</th>
+            <th>Ações</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Top Gun: Maverick</td>
+            <td>R$ 99,99</td>
+            <td>10</td>
+            <td>12/12/12</td>
+            <td>
+                <img src="./icons/dots-three.svg" alt="" />
+            </td>
+        </tr>
+    </table>
+    <div class="pagination">
+        <img src="./icons/table-page-left-disable.svg" alt="">
+        <div class="pages">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+        <img src="./icons/table-page-right.svg" alt="">
+
+    </div>
+
+    <a class="navbar-brand ml-auto" href="./adm_cliente_criar.html">
+        <img class="button-plus" src="./icons/button-plus.svg" alt="">
+    </a>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#criarClienteModal">
+        Abrir Modal
+    </button>
+    <div class="modal fade" id="criarClienteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Administração de Clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="modal-title">Preencha os campos:</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="userForm">
+                                <div class="form-group">
+                                    <label for="firstName">Primeiro Nome:</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Último Nome:</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="birthDate">Data de Nascimento:</label>
+                                    <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Senha:</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phoneNumber">Número de Telefone:</label>
+                                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="genre">Gênero:</label>
+                                    <input type="text" class="form-control" id="genre" name="genre" required
+                                        style="background-color: #E2E6EF;">
+                                </div>
+
+                                <button type="button" class="btn btn-primary" onclick="saveUser()">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="./adm_cliente.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+</html>
