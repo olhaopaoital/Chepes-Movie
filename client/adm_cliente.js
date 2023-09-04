@@ -1,3 +1,7 @@
+window.onload = function() {
+    listAllUsers();
+};
+
 function toggleSortIcon(sortImg) {
     if (sortImg.src.includes('arrow-fat-up.svg')) {
         sortImg.src = './icons/arrow-fat-down.svg';
@@ -22,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         console.log(userData);
 
-        // Envie os dados para a sua API Node.js usando uma requisição HTTP POST
         fetch("http://localhost:3333/app/user/", {
             method: "POST",
             headers: {
@@ -32,14 +35,36 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            // Aqui você pode lidar com a resposta da API, como exibir uma mensagem de sucesso
             console.log("Resposta da API:", data);
             alert("Usuário criado com sucesso!");
         })
         .catch(error => {
-            // Lidar com erros, como exibir uma mensagem de erro
             console.error("Erro ao criar usuário:", error);
             alert("Erro ao criar usuário. Verifique os dados e tente novamente.");
         });
     });
 });
+
+
+function listAllUsers() {
+    fetch("http://localhost:3333/app/user/all")
+        .then(response => response.json())
+        .then(users => {
+            const table = document.getElementById('tableUsers');
+            table.innerHTML = '';
+
+            users.forEach(user => {
+                const row = table.insertRow();
+                row.innerHTML = `<tr>
+                                 <td>${user.id}</td>
+                                 <td>${user.email}</td>
+                                 <td>${user.firstName}</td>
+                                 <td>${user.createdAt}</td>
+                                 <td><img src="./icons/dots-three.svg" alt="" /></td>
+                                 </tr>`;
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}

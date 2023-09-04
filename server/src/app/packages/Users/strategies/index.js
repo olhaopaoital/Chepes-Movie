@@ -13,6 +13,7 @@ import VerifyRequiredFieldCpfStrategy from './VerifyRequiredFieldCpfStrategy';
 import GetUserByCpfStrategy from './GetUserByCpfStrategy';
 import VerifyRequiredFieldIdStrategy from './VerifyRequiredFieldIdStrategy';
 import GetUserByIdStrategy from './GetUserByIdStrategy';
+import GetAllUsersStrategy from './GetAllUsersStrategy';
 
 export {
 	CreateUserStrategy,
@@ -30,4 +31,5 @@ export {
 	GetUserByCpfStrategy,
 	VerifyRequiredFieldIdStrategy,
 	GetUserByIdStrategy,
+	GetAllUsersStrategy,
 };

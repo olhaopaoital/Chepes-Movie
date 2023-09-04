@@ -89,6 +89,16 @@ class UserRepository extends AbstractRepository {
 		});
 	}
 
+	async getAllUsers() {
+		const activeStatus = await this.getActiveStatusId();
+
+		return await User.findAll({
+		  where: {
+			statusId: activeStatus,
+		  },
+		});
+	}
+
 	async getByEmail(email) {
 		const activeStatus = await this.getActiveStatusId();
 

@@ -7,9 +7,9 @@ const userRoutes = Router();
 const facade = new UserFacade(controller);
 
 userRoutes.post('/', facade.create);
-userRoutes.get('/:cpf', facade.getByCpf);
+userRoutes.get('/cpf/:cpf', facade.getByCpf);
 userRoutes.get('/id/:id', facade.getById);
-
+userRoutes.get('/all', facade.getAllUsers);
 userRoutes.put('/', facade.update);
 userRoutes.put('/password', facade.updatePassword);
 userRoutes.delete('/', facade.deleteLogically);

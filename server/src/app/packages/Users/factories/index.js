@@ -4,6 +4,7 @@ import UpdateUserPasswordFactory from './UpdateUserPasswordFactory';
 import DeleteUserLogicallyFactory from './DeleteUserLogicallyFactory';
 import GetUserByCpfFactory from './GetUserByCpfFactory';
 import GetUserByIdFactory from './GetUserByIdFactory';
+import GetAllUsersFactory from './GetAllUsersFactory';
 
 export {
 	CreateUserFactory,
@@ -12,4 +13,5 @@ export {
 	DeleteUserLogicallyFactory,
 	GetUserByCpfFactory,
 	GetUserByIdFactory,
+	GetAllUsersFactory,
 };

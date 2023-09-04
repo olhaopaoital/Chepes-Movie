@@ -7,6 +7,7 @@ import {
 	GetUserByIdFactory,
 	UpdateUserFactory,
 	UpdateUserPasswordFactory,
+	GetAllUsersFactory,
 } from '../../packages/Users/factories';
 
 class UserController extends AbstractController {
@@ -15,6 +16,7 @@ class UserController extends AbstractController {
 		this.create = this.create.bind(this);
 		this.getById = this.getById.bind(this);
 		this.getByCpf = this.getByCpf.bind(this);
+		this.getAllUsers = this.getAllUsers.bind(this);
 		this.update = this.update.bind(this);
 		this.deleteLogically = this.deleteLogically.bind(this);
 		this.updatePassword = this.updatePassword.bind(this);
@@ -71,6 +73,13 @@ class UserController extends AbstractController {
 
 		const factory = new GetUserByCpfFactory();
 		const result = await factory.execute(user);
+		res.json(result);
+	}
+
+	async getAllUsers(req, res, next) {
+		const factory = new GetAllUsersFactory();
+		const result = await factory.execute();
+		console.log(result);
 		res.json(result);
 	}
 }
