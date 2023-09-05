@@ -1,7 +1,7 @@
 import CustomError from '../domains/CustomError';
 
 export default class AbstractFactory {
-	constructor(strategies, data) {
+	constructor(strategies) {
 		this.strategies = strategies;
 		this.error = {};
 	}
