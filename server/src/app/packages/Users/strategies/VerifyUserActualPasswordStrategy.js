@@ -9,7 +9,7 @@ export default class VerifyUserPasswordStrategy extends AbstractStrategy {
 	async execute({id, password }) {
 		const user = await this.userRepository.getById(id);
 
-		if (!(await user.checkPassword(password))) {
+		if ((await user.password != password)) {
 			this.throwError('Senha atual incorreta.');
 			return;
 		}
